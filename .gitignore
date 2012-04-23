@@ -4,10 +4,7 @@ Makefile.old
 *.bak
 pm_to_blib
 blib/
-WWW-Mechanize-FireFox-*
-WWW-Mechanize-FireFox-*/
-WWW-Mechanize-Firefox-*
-WWW-Mechanize-Firefox-*/
+Text-CleanFragment-*/
+Text-CleanFragment-*
 .releaserc
 cover_db
-firefox-versions/
