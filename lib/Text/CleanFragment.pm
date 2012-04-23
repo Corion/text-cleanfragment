@@ -37,6 +37,9 @@ or problematic.
 
 =head2 C<< clean_fragment @fragments >>
 
+    my $url_title = join("_", clean_fragment("Ümloud vs. ß",'by',"Grégory"));
+    # Umloud_vs._ss_by_Gregory
+
 Returns a cleaned up list of elements. The input elements
 are expected to be encoded as Unicode strings. Decode them using
 L<Encode> if you read the fragments as file names from the filesystem.
@@ -110,7 +113,7 @@ __END__
 =head1 REPOSITORY
 
 The public repository of this module is 
-L<http://github.com/Corion/app-imagestream>.
+L<http://github.com/Corion/text-cleanfragment>.
 
 =head1 SUPPORT
 
@@ -119,12 +122,9 @@ L<http://perlmonks.org/>.
 
 =head1 BUG TRACKER
 
-Please use the Github tracker for the time being.
-
-=for later
 Please report bugs in this module via the RT CPAN bug queue at
-L<https://rt.cpan.org/Public/Dist/Display.html?Name=WWW-Mechanize-Firefox>
-or via mail to L<www-mechanize-firefox-Bugs@rt.cpan.org>.
+L<https://rt.cpan.org/Public/Dist/Display.html?Name=Text-CleanFragment>
+or via mail to L<text-cleanfragment-Bugs@rt.cpan.org>.
 
 =head1 AUTHOR
 
@@ -132,7 +132,7 @@ Max Maischein C<corion@cpan.org>
 
 =head1 COPYRIGHT (c)
 
-Copyright 2009-2012 by Max Maischein C<corion@cpan.org>.
+Copyright 2012 by Max Maischein C<corion@cpan.org>.
 
 =head1 LICENSE
 
