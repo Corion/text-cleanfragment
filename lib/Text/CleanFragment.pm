@@ -35,7 +35,7 @@ or problematic.
 
 =head1 FUNCTIONS
 
-=head2 C<< clean_fragment @fragments >>
+=head2 C<< clean_fragment( @fragments ) >>
 
     my $url_title = join("_", clean_fragment("Ümloud vs. ß",'by',"Grégory"));
     # Umloud_vs._ss_by_Gregory
