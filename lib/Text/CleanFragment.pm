@@ -9,6 +9,8 @@ $VERSION = '0.01';
 
 =head1 NAME
 
+=encoding utf8
+
 Text::CleanFragment - clean up text to use as URL fragment or filename
 
 =head1 SYNOPSIS
