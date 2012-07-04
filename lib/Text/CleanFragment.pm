@@ -4,7 +4,7 @@ use vars qw($VERSION @EXPORT);
 use Exporter qw'import';
 use Text::Unidecode;
 
-$VERSION = '0.01';
+$VERSION = '0.02';
 @EXPORT = (qw(clean_fragment));
 
 =head1 NAME
