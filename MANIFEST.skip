@@ -15,3 +15,5 @@ CVS/
 ^cover_db/
 ^db/
 ^firefox-versions/
+^MYMETA.*$
+^README.mkdn$

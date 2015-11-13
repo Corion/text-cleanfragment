@@ -1,7 +1,9 @@
 NAME
+
     Text::CleanFragment - clean up text to use as URL fragment or filename
 
 SYNOPSIS
+
       my $title = "Do p\x{00FC}t <this> into URL's?";
       my $id = 42;
       my $url = join "/",
@@ -15,15 +17,17 @@ SYNOPSIS
 
     or, to be more exact
 
-      /^([-.A-Za-z0-9]([-._A-Za-z0-9]*[-.A-Za-z0-9])?$/
+      /^([A-Za-z0-9]([-._A-Za-z0-9]*[A-Za-z0-9])?$/
 
-    This makes the return values safe to be used as URL fragments or as file
-    names on many file systems where whitespace and characters outside of
-    the Latin alphabet are undesired or problematic.
+    This makes the return values safe to be used as URL fragments or as
+    file names on many file systems where whitespace and characters outside
+    of the Latin alphabet are undesired or problematic.
 
 FUNCTIONS
-  `clean_fragment( @fragments )'
-        my $url_title = join("_", clean_fragment("Ãœmloud vs. ÃŸ",'by',"GrÃ©gory"));
+
+ clean_fragment( @fragments )
+
+        my $url_title = join("_", clean_fragment("Ümloud vs. ß",'by',"Grégory"));
         # Umloud_vs._ss_by_Gregory
 
     Returns a cleaned up list of elements. The input elements are expected
@@ -32,44 +36,50 @@ FUNCTIONS
 
     The operations performed are:
 
-    *   Use Text::Unidecode to downgrade the text from Unicode to 7-bit
-        ASCII.
+      * Use Text::Unidecode to downgrade the text from Unicode to 7-bit
+      ASCII.
 
-    *   Eliminate single and double quotes, apostrophes.
+      * Eliminate single and double quotes, apostrophes.
 
-    *   Replace all non-letters, non-digits by underscores, including
-        whitespace and control characters.
+      * Replace all non-letters, non-digits by underscores, including
+      whitespace and control characters.
 
-    *   Squash dashes to a single dash
+      * Squash dashes to a single dash
 
-    *   Squash `_-_' and `_-_(-_)+' to -
+      * Squash _-_ and _-_(-_)+ to -
 
-    *   Eliminate leading underscores
+      * Eliminate leading underscores
 
-    *   Eliminate trailing underscores
+      * Eliminate trailing underscores
 
-    *   Eliminate underscores before - or .
+      * Eliminate underscores before - or .
 
     In scalar context, returns the first element of the cleaned up list.
 
 REPOSITORY
+
     The public repository of this module is
     http://github.com/Corion/text-cleanfragment.
 
 SUPPORT
+
     The public support forum of this module is http://perlmonks.org/.
 
 BUG TRACKER
+
     Please report bugs in this module via the RT CPAN bug queue at
     https://rt.cpan.org/Public/Dist/Display.html?Name=Text-CleanFragment or
     via mail to text-cleanfragment-Bugs@rt.cpan.org.
 
 AUTHOR
-    Max Maischein `corion@cpan.org'
+
+    Max Maischein corion@cpan.org
 
 COPYRIGHT (c)
-    Copyright 2012 by Max Maischein `corion@cpan.org'.
+
+    Copyright 2012 by Max Maischein corion@cpan.org.
 
 LICENSE
+
     This module is released under the same terms as Perl itself.
 
