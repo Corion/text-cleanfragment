@@ -28,7 +28,7 @@ This module downgrades strings of text to match
 
 or, to be more exact
 
-  /^([-.A-Za-z0-9]([-._A-Za-z0-9]*[-.A-Za-z0-9])?$/
+  /^([A-Za-z0-9]([-._A-Za-z0-9]*[A-Za-z0-9])?$/
 
 This makes the return values safe to be used as URL fragments
 or as file names on many file systems where whitespace
