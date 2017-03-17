@@ -6,8 +6,7 @@
    "dynamic_config" : 0,
    "generated_by" : "ExtUtils::MakeMaker version 7.24, CPAN::Meta::Converter version 2.143240",
    "license" : [
-      "perl_5",
-      "unknown"
+      "perl_5"
    ],
    "meta-spec" : {
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
@@ -40,12 +39,16 @@
       }
    },
    "release_status" : "stable",
-   "version" : "0.03",
-   "x_bugtracker" : "http://rt.cpan.org/Public/Dist/Display.html?Name=Text-CleanFragment",
-   "x_repository" : {
-      "type" : "git",
-      "url" : "git://github.com/Corion/text-cleanfragment.git",
-      "web" : "https://github.com/Corion/text-cleanfragment"
+   "resources" : {
+      "license" : [
+         "http://dev.perl.org/licenses/"
+      ],
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/Corion/text-cleanfragment.git",
+         "web" : "https://github.com/Corion/text-cleanfragment"
+      }
    },
+   "version" : "0.03",
    "x_static_install" : 1
 }
