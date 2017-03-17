@@ -23,9 +23,15 @@ regen_README($module_pm);
 WriteMakefile1(
     MIN_PERL_VERSION => '5.006',
     META_MERGE => {
-        resources => {
-            repository => "http://github.com/Corion/$repo",
+        repository => {
+          web => 'https://github.com/Corion/' . $repo,
+          url => "git://github.com/Corion/$repo.git",
+          type => 'git',
         },
+        bugtracker => 'http://rt.cpan.org/Public/Dist/Display.html?Name=Text-CleanFragment',
+        license    => 'http://dev.perl.org/licenses/',
+        dynamic_config   => 0, # we promise to keep META.* up-to-date
+        x_static_install => 1, # we are pure Perl and don't do anything fancy
     },
     BUILD_REQUIRES => {
                         'Exporter'   => '5', # we need the "import" facility
