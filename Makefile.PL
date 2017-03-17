@@ -24,6 +24,7 @@ regen_README($module_pm);
 my %module = (
     MIN_PERL_VERSION => '5.006',
     META_MERGE => {
+        "meta-spec" => { version => 2 },
         repository => {
           web => 'https://github.com/Corion/' . $repo,
           url => "git://github.com/Corion/$repo.git",
