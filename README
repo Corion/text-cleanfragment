@@ -11,6 +11,8 @@ SYNOPSIS
                   clean_fragment( $title );
       # 42/Do_put_this_into_URLs
 
+DESCRIPTION
+
     This module downgrades strings of text to match
 
       /^[-._A-Za-z0-9]*$/
@@ -59,7 +61,7 @@ FUNCTIONS
 REPOSITORY
 
     The public repository of this module is
-    http://github.com/Corion/text-cleanfragment.
+    https://github.com/Corion/text-cleanfragment.
 
 SUPPORT
 
@@ -77,7 +79,7 @@ AUTHOR
 
 COPYRIGHT (c)
 
-    Copyright 2012 by Max Maischein corion@cpan.org.
+    Copyright 2012-2017 by Max Maischein corion@cpan.org.
 
 LICENSE
 
