@@ -22,6 +22,8 @@ Text::CleanFragment - clean up text to use as URL fragment or filename
               clean_fragment( $title );
   # 42/Do_put_this_into_URLs
 
+=head1 DESCRIPTION
+
 This module downgrades strings of text to match
 
   /^[-._A-Za-z0-9]*$/
