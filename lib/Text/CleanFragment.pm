@@ -116,8 +116,8 @@ __END__
 
 =head1 REPOSITORY
 
-The public repository of this module is 
-L<http://github.com/Corion/text-cleanfragment>.
+The public repository of this module is
+L<https://github.com/Corion/text-cleanfragment>.
 
 =head1 SUPPORT
 
@@ -136,7 +136,7 @@ Max Maischein C<corion@cpan.org>
 
 =head1 COPYRIGHT (c)
 
-Copyright 2012 by Max Maischein C<corion@cpan.org>.
+Copyright 2012-2017 by Max Maischein C<corion@cpan.org>.
 
 =head1 LICENSE
 
