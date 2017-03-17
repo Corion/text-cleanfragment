@@ -11,6 +11,7 @@ my @tests = map { glob $_ } 't/*.t', 't/*/*.t';
 my $module = 'Text::CleanFragment';
 (my $module_pm = "lib/$module.pm") =~ s!::!/!g;
 (my $repo = lc $module) =~ s!::!-!g;
+(my $distname = $module) =~ s!::!-!g;
 
 # I should maybe use something like Shipwright...
 regen_README($module_pm);
@@ -20,7 +21,7 @@ regen_README($module_pm);
 #       Thanks to Devel::CheckLib, LIBS= and INC= already exist
 # TODO: Move OS checking to Devel::CheckOS
 
-WriteMakefile1(
+my %module = (
     MIN_PERL_VERSION => '5.006',
     META_MERGE => {
         repository => {
@@ -48,6 +49,14 @@ WriteMakefile1(
     test            => { TESTS => join( ' ', @tests ) },
 );
 
+sub get_module_info { %module }
+
+if( ! caller ) {
+    # I should maybe use something like Shipwright...
+    regen_README($module_pm);
+    #regen_EXAMPLES();
+    WriteMakefile1(get_module_info);
+};
 1;
 
 sub WriteMakefile1 {  #Written by Alexandr Ciornii, version 0.21. Added by eumm-upgrade.
