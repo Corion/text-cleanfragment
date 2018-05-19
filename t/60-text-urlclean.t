@@ -14,6 +14,7 @@ push @tests, ["","",'Empty String'];
 push @tests, ["\x{5317}\x{4EB0}\n",  # those are the Chinese characters for Beijing, according to Sean M. Burke
               'Bei_Jing', '(Some) Chinese characters also work'];
 push @tests, ["Do p\x{00FC}t <this> into URL's?","Do_put_this_into_URLs",'Synopsis'];
+push @tests, ["Do\x{A0}nonbreaking\x{A0}spaces\x{A0}work?","Do_nonbreaking_spaces_work",'nbsp'];
 
 plan tests => 1+@tests*3;
 
