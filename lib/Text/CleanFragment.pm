@@ -122,7 +122,7 @@ L<https://github.com/Corion/text-cleanfragment>.
 =head1 SUPPORT
 
 The public support forum of this module is
-L<http://perlmonks.org/>.
+L<https://perlmonks.org/>.
 
 =head1 BUG TRACKER
 
@@ -136,7 +136,7 @@ Max Maischein C<corion@cpan.org>
 
 =head1 COPYRIGHT (c)
 
-Copyright 2012-2017 by Max Maischein C<corion@cpan.org>.
+Copyright 2012-2019 by Max Maischein C<corion@cpan.org>.
 
 =head1 LICENSE
 
