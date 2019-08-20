@@ -14,7 +14,7 @@ Text::CleanFragment - clean up text to use as URL fragment or filename
 
 =head1 SYNOPSIS
 
-  my $title = "Do p\x{00FC}t <this> into URL's?";
+  my $title = "Do p\x{00FC}t <this> into/URL's?";
   my $id = 42;
   my $url = join "/",
               $id,
