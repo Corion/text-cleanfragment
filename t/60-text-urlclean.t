@@ -4,7 +4,8 @@ use Test::More;
 use Data::Dumper;
 
 use Text::CleanFragment;
-use utf8;
+use utf8;
+
 binmode DATA, ':utf8';
 my @tests = map { s!\s+$!!g; [split /\|/] } grep {!/^\s*#/ && /\S/} <DATA>;
 
@@ -28,7 +29,8 @@ for (@tests) {
 
 is_deeply [clean_fragment(
     'Lenny', 'Motörhead'
-)], ['Lenny','Motorhead'], "Multiple arguments also work";
+)], ['Lenny','Motorhead'], "Multiple arguments also work";
+
 __DATA__
 Grégory|Gregory
    Leading Spaces|Leading_Spaces
