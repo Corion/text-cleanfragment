@@ -41,6 +41,9 @@ my %module = (
                         'Exporter'   => '5', # we need the "import" facility
                         'Carp'       => '0',
     },
+    TEST_REQUIRES => {
+                        'Test::More' => '0',
+    },
     'NAME'          => $module,
     'LICENSE'       => 'perl',
     'VERSION_FROM'  => $module_pm,
@@ -81,7 +84,7 @@ sub WriteMakefile1 {  #Written by Alexandr Ciornii, version 0.21. Added by eumm-
     delete $params{AUTHOR} if $] < 5.005;
     delete $params{ABSTRACT_FROM} if $] < 5.005;
     delete $params{BINARY_LOCATION} if $] < 5.005;
-    
+
     WriteMakefile(%params);
 }
 
@@ -111,7 +114,7 @@ sub regen_README {
 sub regen_EXAMPLES {
     my $perl = $^X;
     (my $target = $module_pm) =~ s!\.pm$!/Examples.pm!;
-    
+
     if( -d 'examples' ) {
         warn "(Re)Creating $target\n";
         if ($perl =~/\s/) {
