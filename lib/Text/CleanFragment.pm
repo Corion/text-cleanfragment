@@ -1,11 +1,10 @@
 package Text::CleanFragment;
 use strict;
-use vars qw($VERSION @EXPORT);
 use Exporter qw'import';
 use Text::Unidecode;
 
-$VERSION = '0.03';
-@EXPORT = (qw(clean_fragment));
+our $VERSION = '0.03';
+our @EXPORT = (qw(clean_fragment));
 
 =head1 NAME
 
