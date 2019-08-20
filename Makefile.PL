@@ -22,7 +22,7 @@ regen_README($module_pm);
 # TODO: Move OS checking to Devel::CheckOS
 
 my %module = (
-    MIN_PERL_VERSION => '5.006',
+    MIN_PERL_VERSION => '5.008', # because of "use utf8" in the tests
     META_MERGE => {
         "meta-spec" => { version => 2 },
         resources => {
@@ -42,7 +42,9 @@ my %module = (
                         'Carp'       => '0',
     },
     TEST_REQUIRES => {
-                        'Test::More' => '0',
+                        'Test::More'   => '0',
+                        'Data::Dumper' => '0',
+                        'utf8'         => '0',
     },
     'NAME'          => $module,
     'LICENSE'       => 'perl',

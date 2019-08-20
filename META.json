@@ -34,12 +34,14 @@
       "runtime" : {
          "requires" : {
             "Text::Unidecode" : "0",
-            "perl" : "5.006"
+            "perl" : "5.008"
          }
       },
       "test" : {
          "requires" : {
-            "Test::More" : "0"
+            "Data::Dumper" : "0",
+            "Test::More" : "0",
+            "utf8" : "0"
          }
       }
    },
