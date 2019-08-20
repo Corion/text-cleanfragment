@@ -3,11 +3,6 @@ use Test::More;
 use File::Spec;
 use File::Find;
 use File::Temp 'tempfile';
-use Getopt::Long;
-
-GetOptions(
-    'verbose' => \my $verbose,
-);
 
 my @files;
 
@@ -20,7 +15,8 @@ foreach my $file (@files) {
 }
 
 sub wanted {
-    push @files, $File::Find::name if /\.p(l|m|od)$/;
+    push @files, $File::Find::name if /\.p(l|m|od)$/
+        and $_ !~ /\bDSL\.pm$/; # we skip that one as it initializes immediately
 }
 
 sub synopsis_file_ok {
@@ -32,9 +28,6 @@ sub synopsis_file_ok {
                    grep { /^\s\s/ } # extract all verbatim (=code) stuff
                    grep { /^=head1\s+SYNOPSIS$/.../^=/ } # extract Pod synopsis
                    <$fh>;
-    if( $verbose ) {
-        diag $_ for @synopsis 
-    };
     if( @synopsis ) {
         my($tmpfh,$tempname) = tempfile();
         print {$tmpfh} join '', @synopsis;
@@ -54,5 +47,5 @@ sub synopsis_file_ok {
             skip "$file has no SYNOPSIS section", 1;
         };
     };
-    
+
 }
