@@ -3,9 +3,8 @@ abstract: 'clean up text to use as URL fragment or filename'
 author:
   - 'Max Maischein <corion@cpan.org>'
 build_requires:
-  Carp: '0'
   Data::Dumper: '0'
-  Exporter: '5'
+  ExtUtils::MakeMaker: '0'
   Test::More: '0'
   utf8: '0'
 configure_requires:
@@ -22,11 +21,13 @@ no_index:
     - t
     - inc
 requires:
+  Carp: '0'
+  Exporter: '5'
   Text::Unidecode: '0'
   perl: '5.008'
 resources:
-  license: http://dev.perl.org/licenses/
-  repository: git://github.com/Corion/text-cleanfragment.git
+  license: https://dev.perl.org/licenses/
+  repository: git://github.com/Corion/Text-CleanFragment.git
 version: '0.04'
 x_serialization_backend: 'CPAN::Meta::YAML version 0.018'
 x_static_install: 1

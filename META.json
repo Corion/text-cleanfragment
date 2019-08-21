@@ -22,8 +22,7 @@
    "prereqs" : {
       "build" : {
          "requires" : {
-            "Carp" : "0",
-            "Exporter" : "5"
+            "ExtUtils::MakeMaker" : "0"
          }
       },
       "configure" : {
@@ -33,6 +32,8 @@
       },
       "runtime" : {
          "requires" : {
+            "Carp" : "0",
+            "Exporter" : "5",
             "Text::Unidecode" : "0",
             "perl" : "5.008"
          }
@@ -48,12 +49,12 @@
    "release_status" : "stable",
    "resources" : {
       "license" : [
-         "http://dev.perl.org/licenses/"
+         "https://dev.perl.org/licenses/"
       ],
       "repository" : {
          "type" : "git",
-         "url" : "git://github.com/Corion/text-cleanfragment.git",
-         "web" : "https://github.com/Corion/text-cleanfragment"
+         "url" : "git://github.com/Corion/Text-CleanFragment.git",
+         "web" : "https://github.com/Corion/Text-CleanFragment"
       }
    },
    "version" : "0.04",
