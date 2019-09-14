@@ -54,3 +54,4 @@ Do püt <this> into URL's?|Do_put_this_into_URLs|Synopsis
 This is plenking ...|This_is_plenking...|No underscore before \W
 Also    this   should be ___ squashed|Also_this_should_be_squashed|Squash underscores
 Also _ _ _ this _ _ should be _ _ squashed|Also_this_should_be_squashed|Squash underscores
+Bang!|Bang|Exclamation points also get eliminated
