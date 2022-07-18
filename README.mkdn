@@ -43,7 +43,7 @@ are expected to be encoded as Unicode strings. Decode them using
 
 The operations performed are:
 
-- Use [Text::Unidecode](https://metacpan.org/pod/Text::Unidecode) to downgrade the text from Unicode to 7-bit ASCII.
+- Use [Text::Unidecode](https://metacpan.org/pod/Text%3A%3AUnidecode) to downgrade the text from Unicode to 7-bit ASCII.
 - Eliminate single and double quotes, apostrophes.
 - Replace all non-letters, non-digits by underscores, including whitespace
 and control characters.
@@ -69,7 +69,7 @@ The public support forum of this module is
 
 Please report bugs in this module via the RT CPAN bug queue at
 [https://rt.cpan.org/Public/Dist/Display.html?Name=Text-CleanFragment](https://rt.cpan.org/Public/Dist/Display.html?Name=Text-CleanFragment)
-or via mail to [text-cleanfragment-Bugs@rt.cpan.org](https://metacpan.org/pod/text-cleanfragment-Bugs@rt.cpan.org).
+or via mail to [text-cleanfragment-Bugs@rt.cpan.org](https://metacpan.org/pod/text-cleanfragment-Bugs%40rt.cpan.org).
 
 # AUTHOR
 
