@@ -8,6 +8,7 @@ MANIFEST.SKIP
 META.json
 META.yml
 README
+t/00-load.t
 t/60-text-urlclean.t
 xt/99-changes.t
 xt/99-compile.t
