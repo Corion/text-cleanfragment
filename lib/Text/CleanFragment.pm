@@ -3,7 +3,7 @@ use strict;
 use Exporter qw'import';
 use Text::Unidecode;
 
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 our @EXPORT = (qw(clean_fragment));
 
 =head1 NAME
