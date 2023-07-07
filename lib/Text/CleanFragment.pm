@@ -113,6 +113,11 @@ sub clean_fragment {
 
 __END__
 
+=head1 SEE ALSO
+
+L<Mojo::Util> - the C<slugify> subroutine does something comparable but
+does not squish repeating characters and removes dashes.
+
 =head1 REPOSITORY
 
 The public repository of this module is

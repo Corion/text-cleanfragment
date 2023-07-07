@@ -52,6 +52,10 @@ L<https://rt.cpan.org/Public/Dist/Display.html?Name=Text-CleanFragment>
 or via mail to L<text-cleanfragment-Bugs@rt.cpan.org>.
 
 
+SEE ALSO
+
+L<Mojo::Util> - the C<slugify> subroutine does something comparable but
+does not squish repeating characters and removes dashes.
 
 AUTHOR
 

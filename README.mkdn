@@ -55,6 +55,11 @@ and control characters.
 
 In scalar context, returns the first element of the cleaned up list.
 
+# SEE ALSO
+
+[Mojo::Util](https://metacpan.org/pod/Mojo%3A%3AUtil) - the `slugify` subroutine does something comparable but
+does not squish repeating characters and removes dashes.
+
 # REPOSITORY
 
 The public repository of this module is
