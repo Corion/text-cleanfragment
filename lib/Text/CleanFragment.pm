@@ -57,7 +57,7 @@ Use L<Text::Unidecode> to downgrade the text from Unicode to 7-bit ASCII.
 
 =item *
 
-Eliminate single and double quotes, apostrophes.
+Eliminate single and double quotes, backquotes and apostrophes.
 
 =item *
 
@@ -105,7 +105,7 @@ sub clean_fragment {
         s/^[-_]+//;             # Eliminate leading underscores
         s/[-_]+$//;             # Eliminate trailing underscores
         s/_(\W)/$1/;            # No underscore before - or .
-     };
+    };
     wantarray ? @_ : $_[0];
 };
 
