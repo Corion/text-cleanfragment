@@ -4,7 +4,7 @@ use Exporter qw'import';
 use Text::Unidecode;
 
 our $VERSION = '0.06';
-our @EXPORT = (qw(clean_fragment));
+our @EXPORT = (qw(clean_fragment clean_fragment_filename));
 
 =head1 NAME
 
@@ -109,6 +109,37 @@ sub clean_fragment {
     };
     wantarray ? @_ : $_[0];
 };
+
+=head2 C<< clean_fragment_filename( @fragments ) >>
+
+  my @parts = clean_fragment_filename( @fragments );
+
+Does the same as C<clean_fragment> but only removes the following characters,
+making the output safe for Unicode-capable filesystems:
+
+  \x{00}-\x{1f}
+  / \ * < > : | ?
+  ' " ` ´
+  \x{2019}
+
+This does not necessarily make the filename safe for blind use in shell
+commands, as for example C<;> and C<!> remain in the filenames.
+
+=cut
+
+sub clean_fragment_filename {
+    for( @_ ) {
+        tr/'"\x{2019}`´//d;   # Eliminate apostrophes and backquotes
+        s/[\s\x00-\x1f\/\\\*<>:|\?]+/_/g;  # Replace all non-ascii by underscores, including whitespace
+        s/-+/-/g;               # Squash dashes
+        s/_+/_/g;               # Squash underscores
+        s/_(?:(\p{IsPunctuation})_)+/$1/g;         # Squash _-_ and _-_-_ to -
+        s/^[-_]+//;             # Eliminate leading underscores
+        s/[-_]+$//;             # Eliminate trailing underscores
+        s/_(\W)/$1/;            # No underscore before - or .
+    };
+    wantarray ? @_ : $_[0];
+}
 
 1;
 

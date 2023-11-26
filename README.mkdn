@@ -44,7 +44,7 @@ are expected to be encoded as Unicode strings. Decode them using
 The operations performed are:
 
 - Use [Text::Unidecode](https://metacpan.org/pod/Text%3A%3AUnidecode) to downgrade the text from Unicode to 7-bit ASCII.
-- Eliminate single and double quotes, apostrophes.
+- Eliminate single and double quotes, backquotes and apostrophes.
 - Replace all non-letters, non-digits by underscores, including whitespace
 and control characters.
 - Squash dashes to a single dash
@@ -54,6 +54,21 @@ and control characters.
 - Eliminate underscores before - or .
 
 In scalar context, returns the first element of the cleaned up list.
+
+## `clean_fragment_filename( @fragments )`
+
+    my @parts = clean_fragment_filename( @fragments );
+
+Does the same as `clean_fragment` but only removes the following characters,
+making the output safe for Unicode-capable filesystems:
+
+    \x{00}-\x{1f}
+    / \ * < > : | ?
+    ' " ` ´
+    \x{2019}
+
+This does not necessarily make the filename safe for blind use in shell
+commands, as for example `;` and `!` remain in the filenames.
 
 # SEE ALSO
 
