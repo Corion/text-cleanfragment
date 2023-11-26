@@ -101,6 +101,7 @@ sub clean_fragment {
         tr/'"\x{2019}`´//d;   # Eliminate apostrophes and backquotes
         s/[^a-zA-Z0-9.-]+/_/g;  # Replace all non-ascii by underscores, including whitespace
         s/-+/-/g;               # Squash dashes
+        s/_+/_/g;               # Squash underscores
         s/_(?:-_)+/-/g;         # Squash _-_ and _-_-_ to -
         s/^[-_]+//;             # Eliminate leading underscores
         s/[-_]+$//;             # Eliminate trailing underscores
